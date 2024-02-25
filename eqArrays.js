@@ -13,6 +13,9 @@ const assertEqual = function(actual, expected) {
 // true or false, based on a perfect match.
 const eqArrays = function(arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
+    if (arr1.length !== arr2.length) {
+      return false;
+    }
     if (arr1[i] !== arr2[i]) {
       return false;
     }
@@ -27,3 +30,4 @@ const eqArrays = function(arr1, arr2) {
 // assertEqual("Lighthouse Labs", "Lighthouse Labs");
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 assertEqual(eqArrays([1, 2, 3], [1, 2, "3"]), false); // => should FAIL
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), false); // => should FAIL
