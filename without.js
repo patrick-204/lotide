@@ -26,11 +26,12 @@ const eqArrays = function(arr1, arr2) {
 const without = function(source, itemsToRemove) {
   let arrNotPresent = [];
 
-  for (let i = 0; i < source.length; i++) {
-    if (source[i] !== itemsToRemove[i]) {
-      arrNotPresent.push(source[i]);
+  for (const element of source) {
+    if (!itemsToRemove.includes(element)) {
+      arrNotPresent.push(element);
     }
   }
+
   // console.log(arrNotPresent);
   return arrNotPresent;
 };
