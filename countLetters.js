@@ -32,7 +32,7 @@ const sentence = "lighthouse in the house";
 const result = countLetters(sentence);
 
 // Test code
-assertEqual(result['t'], 1);
+assertEqual(result['l'], 1);
 assertEqual(result['h'], 4);
 assertEqual(result['t'], 2);
 assertEqual(result['e'], 3);
