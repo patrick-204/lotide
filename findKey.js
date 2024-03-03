@@ -18,7 +18,6 @@ const findKey = function(obj, callback) {
       return key;
     }
   }
-  return undefined;
 };
 
 // Example
