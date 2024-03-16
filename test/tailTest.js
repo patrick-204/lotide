@@ -16,4 +16,11 @@ describe("#Tail", () => {
     assert.deepEqual(tail(words)[1], "Labs");
   });
 
+  it("make sure the original array was not altered by the tail function", () => {
+    const testWords = ["hello", "world", "lighthouse"];
+    const originalLength = testWords.length;
+    tail(testWords);
+    assert.strictEqual(testWords.length, originalLength);
+  });
+
 });
