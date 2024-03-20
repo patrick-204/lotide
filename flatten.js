@@ -25,18 +25,19 @@ const eqArrays = function(arr1, arr2) {
 // including nested arrays of elements, and return a "flattened" version of the array.
 const flatten = function(arr) {
   let flat = [];
-
+  
   for (const value of arr) {
     if (Array.isArray(value)) {
-      for (const val in value) {
-        flat.push(value[val]);
-      }
+      // use recursion with the spread operator to call flatten function
+      // until have single array. Spread operator splits the arr array into
+      // multiple elements
+      flat.push(...flatten(value));
     } else {
       flat.push(value);
     }
   }
-  console.log(flat);
   return flat;
 };
 
-flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
+console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+console.log(flatten([1, [2, [3], 4]])); // => [1, 2, 3, 4]
