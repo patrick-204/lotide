@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@patrick-204/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/patrick-204/lotide.git"
   },
-  "author": "",
+  "author": {
+    "name": "Patrick O'Hara",
+    "email": "p.ohara921@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/patrick-204/lotide/issues"
